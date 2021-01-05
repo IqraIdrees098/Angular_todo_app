@@ -1,0 +1,16 @@
+
+    <h1><span class="heading-style">TODO</span></h1>
+
+    <div class="input_div">
+        <input type="text" class="input"  [(ngModel)]="name"  placeholder="Todo">
+        <button class="addButton" (click) = "Add()" >{{addButton}}</button>
+    </div>
+      <br>
+    <div class="container">
+        
+     <div class="item" *ngFor="let todo of todos; index as i ">
+           <span class="item_input">{{todo.name}} </span>
+           <button  class="editButton" (click) = "Edit(todo.name,i)" >Edit</button>
+           <button  class="removeButton" (click) = "Delete(i)" >Remove</button>
+       </div> 
+    </div>
