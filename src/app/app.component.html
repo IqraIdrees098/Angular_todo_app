@@ -8,9 +8,9 @@
       <br>
     <div class="container">
         
-     <div class="item" *ngFor="let todo of todos; index as i ">
+     <div class="item" *ngFor="let todo of todos; index">
            <span class="item_input">{{todo.name}} </span>
-           <button  class="editButton" (click) = "Edit(todo.name,i)" >Edit</button>
-           <button  class="removeButton" (click) = "Delete(i)" >Remove</button>
+           <button  class="editButton" (click) = "Edit(todo.name,index)" >Edit</button>
+           <button  class="removeButton" (click) = "Delete(index)" >Remove</button>
        </div> 
     </div>

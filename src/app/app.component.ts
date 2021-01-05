@@ -8,11 +8,12 @@ import { Todo } from './todo';
 })
 export class AppComponent {
   title = "my-first-app";
-  todos: Todo = [];
+  todos: Todo[] = [];  
   name = "";
   editable = false;
   addButton = "add";
-  editableIndex = "";
+  editableIndex = 0 ;
+
 
   Add(){
     if(this.editable == true){
@@ -35,10 +36,10 @@ export class AppComponent {
     }
    
   }
-  Delete(index){
+  Delete(index:any){
     this.todos.splice(index,1);
   }
-  Edit(item, index){
+  Edit(item:any, index:any){
     this.editable = true;
     this.addButton ="Update";
     this.name = item;

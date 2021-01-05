@@ -1,4 +1,6 @@
+
 export class Todo{
-     name: string;
-    editable: boolean; 
-}
+    name: string = '';
+   editable: boolean = false; 
+
+} 
